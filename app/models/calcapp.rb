@@ -1,0 +1,2 @@
+class Calcapp < ApplicationRecord
+end

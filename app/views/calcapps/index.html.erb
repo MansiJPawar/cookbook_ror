@@ -1,0 +1,17 @@
+
+<h2 class="text-uppercase font-weight-bold">Calculator</h2>
+<div class="card container">
+  <div class="card-body">
+  <%= form_for :calcapp, url: { action: :new }, method: :post do |f|   %>
+    <%= number_field_tag :a, params[:a], class:"form-control"%>
+    <br/>
+    <%= select_tag :operation, options_for_select([['+', :sum], ['-',    :subtr], ['*', :multipl],['/',  :divs]], params[:operation]), class:"btn btn-info btn-sm" %>
+    <br/><br/>
+    <%= number_field_tag :b, params[:b], class:"form-control" %>
+    <br/>
+    <%= f.submit 'Calculate!', class:"btn btn-info btn-sm"%>
+    <br/>
+    <%= @result %>
+  <% end %>
+  </div>
+</div>
