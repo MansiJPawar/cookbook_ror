@@ -4,7 +4,6 @@ class CalcappsController < ApplicationController
 
   # GET /calcapps or /calcapps.json
   def index
-    # @calcapps = Calcapp.all
   end
 
   # GET /calcapps/1 or /calcapps/1.json
@@ -13,8 +12,8 @@ class CalcappsController < ApplicationController
 
   # GET /calcapps/new
   def new
-    @result = Calcapps.send(params[:operation], *[params[:a], params[:b]])
-    render :index
+    @result = Calcapp.send(params[:operation], *[params[:a], params[:b]])
+   render :index
   end
 
   # GET /calcapps/1/edit
